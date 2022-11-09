@@ -1,0 +1,32 @@
+
+.bodyContainer{
+    display: flex;
+   
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    font-family: 'Share Tech Mono', monospace;
+    background-size: 100%;
+    background-color: black;
+    color: white;
+}
+div{
+    display: flex;
+}
+
+.mainCharacterView {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .left{
+    
+    }
+    
+    .right{
+        
+    }

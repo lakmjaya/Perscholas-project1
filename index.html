@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class ="bodyContainer">
+        <div class="mainCharacterView left">
+            <p>Player 1</p>
+            <img id="play1Card" src="cards/BLUE_BACK.svg" width="140" height="180">
+            
+            <form action="">
+                <label for="num">Choose favorite Playing Card number:</label>
+                <select name="num" id="num">
+                    <option value="none">Select number</option>
+                    <option value="1">A</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">J</option>
+                    <option value="12">Q</option>
+                    <option value="13">K</option>
+                </select>
+                <p>Please select your favorite Playing Card Sign:</p><br/>
+                <img src="Signs/1.jpg" height="25" width="30">
+                <input type="radio" id="spade" name="fav_language" value=0>
+                <img src="Signs/2.jpg" height="25" width="30">
+                <input type="radio" id="diamond" name="fav_language" value=13>
+                <img src="Signs/3.jpg" height="25" width="30">
+                <input type="radio" id="clubs" name="fav_language" value=26>
+                <img src="Signs/4.jpg" height="25" width="30">
+                <input type="radio" id="heart" name="fav_language" value=39><br/><br/>
+                <button id="plyer1-selection" onclick="play1Section()">Submit Player1 Selection</button>  
+            </form>
+                
+            
+        </div>
+        <div class="mainCharacterView center">
+            <p>Result</p>
+            <img id="myImg" src="cards/back.jpg" width="140" height="180">
+            <br/>
+            <button id="plyer1-selection" onclick="startGame()">Start the Game</button>
+        </div>
+        <div class="mainCharacterView right">
+            Player 2
+            <img id="play2Card" src="cards/RED_BACK.svg" width="140" height="180">
+            
+            <form action="">
+                <label for="num">Choose favorite Playing Card number:</label>
+                <select name="num" id="num">
+                    <option value="none">Select number</option>
+                    <option value="1">A</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">J</option>
+                    <option value="12">Q</option>
+                    <option value="13">K</option>
+                </select>
+                <p>Please select your favorite Playing Card Sign:</p><br/>
+                <img src="Signs/1.jpg" height="25" width="30">
+                <input type="radio" id="html" name="fav_language" value=0>
+                <img src="Signs/2.jpg" height="25" width="30">
+                <input type="radio" id="css" name="fav_language" value=13>
+                <img src="Signs/3.jpg" height="25" width="30">
+                <input type="radio" id="javascript" name="fav_language" value=26>
+                <img src="Signs/4.jpg" height="25" width="30">
+                <input type="radio" id="javascript" name="fav_language" value=39><br/><br/>
+                <button id="plyer2-selection" onclick="play2Section()">Submit Player2 Selection</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -11,9 +11,9 @@
     background-color: black;
     color: white;
 }
-div{
+/* div{
     display: flex;
-}
+} */
 
 .mainCharacterView {
 
@@ -23,10 +23,4 @@ div{
     justify-content: space-around;
     align-items: center;
     }
-    .left{
-    
-    }
-    
-    .right{
-        
-    }
+   

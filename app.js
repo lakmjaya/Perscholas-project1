@@ -18,11 +18,13 @@
     if(number !=0 && val !=0){
       y = number + val
       document.getElementById("play1Card").src = "cards/"+y+".svg";
+    }else if(number ==0 && val ==0){
+      alert("Player 1 : Please select your favorite betting card number and Sign")
     }else if(number ==0){
-      alert("Player 1 : Please select your favorite card number")
+      alert("Player 1 : Please select your favorite betting card number")
     }else if(val ==0){
-      alert("Player 1 : Please select your favorite card sign")
-    }  
+      alert("Player 1 : Please select your favorite betting card sign")
+    }   
   }
 
   function play2Section() {
@@ -41,10 +43,12 @@
     if(number1 !=0 && val1 !=0){
         z = number1 + val1
         document.getElementById("play2Card").src = "cards/"+z+".svg";
+      }else if(number1 ==0 && val1 ==0){
+        alert("Player 2 : Please select your favorite betting card number and Sign")
       }else if(number1 ==0){
-        alert("Player 2 : Please select your favorite card number")       
+        alert("Player 2 : Please select your favorite betting card number")       
       }else if(val1 ==0) {
-        alert("Player 2 : Please select your favorite card sign")
+        alert("Player 2 : Please select your favorite betting card sign")
     }
   }
   ply1.addEventListener("click", play1Section) 
@@ -59,4 +63,12 @@
     }else if(z===x && y===x){
       alert( " The game again, Plaese refresh the page")
     }
+    }
+
+    function lockPlayer1(){
+
+    }
+
+    function lockPlayer2(){
+
     }

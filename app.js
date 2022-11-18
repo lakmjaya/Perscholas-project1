@@ -3,6 +3,7 @@
     let lock1 =0
     let lock2 =0
     loadPage()
+    document.getElementById('pic').style.visibility = 'none'
     let ply1 = document.getElementById("plyer1-selection")
     
     function play1Section() {
@@ -38,6 +39,7 @@
       lock1=0
       lock2=0
       setHidden("myImg")
+      setHidden("pic")
       setHidden("restart")
       setHidden("start-selection")
       setHidden("plyer1-lock")
@@ -81,17 +83,20 @@
       document.getElementById("myImg").src = "cards/"+x+".svg";
       if(z===x && y===x){
         alert(" Both betting palyers are win the game again, Plaese refresh the page" )
+        setHidden("pic")
         setVisible("restart")
         setHidden("start-selection")
       }else if(y===x){
         document.getElementById("game").innerHTML = "Player 1 win the Card - Click Restart to Continue";
         document.getElementById("form1").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
         alert( "Player 1 win the game")
+        setHidden("pic")
         setVisible("restart")
         setHidden("start-selection")
       }else if(z===x ){
         document.getElementById("game").innerHTML = "Player 2 win the Card - Click Restart to Continue";
         document.getElementById("form2").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
+        setHidden("pic")
         alert( "Player 2 win the game")
         setVisible("restart")
         setHidden("start-selection")
@@ -121,6 +126,7 @@
         }else if(lock1 >0 && lock2 >0){
             setVisible ("start-selection")
             setVisible("myImg")
+            setVisible("pic")
             document.getElementById("game").innerHTML = "Click to Start the Game"; 
         }else{
           document.getElementById("game").innerHTML = "Waiting for the Player2's Selection....";
@@ -138,6 +144,7 @@
         }else if (lock1 >0 && lock2 >0){
             setVisible("start-selection")
             setVisible("myImg")
+            setVisible("pic")
             document.getElementById("game").innerHTML = "Click to Start the Game";
           
         }else{

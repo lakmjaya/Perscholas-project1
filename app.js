@@ -6,7 +6,7 @@
     document.getElementById('pic').style.visibility = 'none'
     let ply1 = document.getElementById("plyer1-selection")
     
-    function play1Section() {
+    function play1Section() {// player 2 Selection
       let number =0
       var val=-1
       number = parseInt( document.getElementById("num").value)
@@ -18,7 +18,7 @@
           break
         }
       }
-      if(number !=0 && val >=0){
+      if(number !=0 && val >=0){// player2's betting card
         y = number + val
         document.getElementById("play1Card").src = "cards/"+y+".svg";
         setVisible("plyer1-lock")
@@ -48,7 +48,7 @@
       document.getElementById("form1").style.boxShadow ="0px 0px 10px 5px #f0c990";
       document.getElementById("form2").style.boxShadow ="0px 0px 10px 5px #f0c990";
     }
-    function play2Section() {
+    function play2Section() { // player 2 Selection
       var radios1 = document.getElementsByName('fav_sign1');
       var val1= -1
       let number1 =0
@@ -60,7 +60,7 @@
             break
           }  
         }
-      if(number1 !=0 && val1 >= 0){
+      if(number1 !=0 && val1 >= 0){ // player2's betting card 
           z = number1 + val1
           document.getElementById("play2Card").src = "cards/"+z+".svg";
           setVisible("plyer2-lock")
@@ -76,24 +76,24 @@
     }
     ply1.addEventListener("click", play1Section) 
 
-    function startGame() {
+    function startGame() { // start the game function
       setVisible("game")
       document.getElementById("game").innerHTML = "Random Betting Card - Click Again";
-      let x = Math.floor(Math.random()*52)+1
-      document.getElementById("myImg").src = "cards/"+x+".svg";
+      let x = Math.floor(Math.random()*52)+1 // select random number between 1-52
+      document.getElementById("myImg").src = "cards/"+x+".svg"; // select relvant random card picture
       if(z===x && y===x){
         alert(" Both betting palyers are win the game again, Plaese refresh the page" )
         setHidden("pic")
         setVisible("restart")
         setHidden("start-selection")
-      }else if(y===x){
+      }else if(y===x){ // if the plyer1 win
         document.getElementById("game").innerHTML = "Player 1 win the Card - Click Restart to Continue";
         document.getElementById("form1").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
         alert( "Player 1 win the game")
         setHidden("pic")
         setVisible("restart")
         setHidden("start-selection")
-      }else if(z===x ){
+      }else if(z===x ){ // if player2 win
         document.getElementById("game").innerHTML = "Player 2 win the Card - Click Restart to Continue";
         document.getElementById("form2").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
         setHidden("pic")
@@ -103,21 +103,21 @@
       }
       }
 
-      function disableButton(id){
+      function disableButton(id){// disable the button
         document.getElementById(id).disabled = true
       }
-      function setVisible(id){
+      function setVisible(id){// visible the button
         document.getElementById(id).style.visibility ="visible"
       }
-      function setHidden(id){
+      function setHidden(id){// hidden the button
         document.getElementById(id).style.visibility ="hidden"
       }
 
-      function enableButton(id){
+      function enableButton(id){// enable the button
         document.getElementById(id).disabled = false
       }
 
-      function lockPlayer1(){
+      function lockPlayer1(){ // lock the player1 selection
         disableButton("plyer1-selection")
         lock1 =1
         if (z===y){
@@ -129,13 +129,13 @@
             setVisible("pic")
             document.getElementById("game").innerHTML = "Click to Start the Game"; 
         }else{
-          document.getElementById("game").innerHTML = "Waiting for the Player2's Selection....";
+          document.getElementById("game").innerHTML = "Waiting for the Player2's Selection....";// message for waiting
         }
         setVisible("game")
         setHidden("plyer1-lock")
       }
 
-      function lockPlayer2(){
+      function lockPlayer2(){// lock the player2 selection
         disableButton("plyer2-selection")
         lock2=1
         if (z===y){
@@ -148,13 +148,13 @@
             document.getElementById("game").innerHTML = "Click to Start the Game";
           
         }else{
-          document.getElementById("game").innerHTML = "Waiting for the Player1's Selection....";
+          document.getElementById("game").innerHTML = "Waiting for the Player1's Selection...."; // message for waiting
         }
         setHidden("plyer2-lock")
         setVisible("game")
       }
 
-      function restartGame(){
+      function restartGame(){ // restart the game
         document.getElementById("myImg").src = "cards/back.jpg";
         document.getElementById("play1Card").src = "cards/BLUE_BACK.svg";
         document.getElementById("play2Card").src = "cards/RED_BACK.svg";

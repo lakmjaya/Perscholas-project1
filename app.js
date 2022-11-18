@@ -43,6 +43,8 @@
       setHidden("plyer1-lock")
       setHidden("plyer2-lock")
       setHidden("game")
+      document.getElementById("form1").style.boxShadow ="0px 0px 10px 5px #f0c990";
+      document.getElementById("form2").style.boxShadow ="0px 0px 10px 5px #f0c990";
     }
     function play2Section() {
       var radios1 = document.getElementsByName('fav_sign1');
@@ -83,11 +85,13 @@
         setHidden("start-selection")
       }else if(y===x){
         document.getElementById("game").innerHTML = "Player 1 win the Card - Click Restart to Continue";
+        document.getElementById("form1").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
         alert( "Player 1 win the game")
         setVisible("restart")
         setHidden("start-selection")
       }else if(z===x ){
         document.getElementById("game").innerHTML = "Player 2 win the Card - Click Restart to Continue";
+        document.getElementById("form2").style.boxShadow ="0px 0px 20px 10px hsl(120, 89%, 45%)";
         alert( "Player 2 win the game")
         setVisible("restart")
         setHidden("start-selection")

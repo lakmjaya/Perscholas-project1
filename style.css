@@ -20,6 +20,8 @@
     font-size: 1.5em;
     box-shadow: 0px 0px 20px 10px rgb(15, 15, 15);
     border-radius: 2%;
+    font-weight: bold; 
+    font-family: Cursive;
 }
 .mainCharacterView {
     width: 50%;
@@ -31,7 +33,7 @@
     height: 85vh;
     width: 45vw;
     }
- #form {
+ #form1, #form2 {
     display: flex;
     background-color: #213321;
     justify-content:first baseline;
@@ -39,7 +41,7 @@
     border: 1px solidblack;
     text-align:center;
     font-size: 1.5em;
-    box-shadow: 0px 0px 20px 10px rgb(216, 13, 13);
+    box-shadow: 0px 0px 10px 5px #f0c990;
     border-radius: 2%;
     height: 85vh;
     width: 45vw;

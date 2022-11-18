@@ -155,7 +155,8 @@
       }
 
       function restartGame(){
-        document.getElementById("play1Card").src = "cards/back.jpg";
+        document.getElementById("myImg").src = "cards/back.jpg";
+        document.getElementById("play1Card").src = "cards/BLUE_BACK.svg";
         document.getElementById("play2Card").src = "cards/RED_BACK.svg";
         enableButton("plyer1-selection")
         enableButton("plyer2-selection")

@@ -1,5 +1,5 @@
 
-.bodyContainer{
+.bodyContainer {
     display: flex;
     justify-content: space-between;
     height: 100vh;
@@ -10,24 +10,69 @@
     background-color: black;
     color: white;
 }
-/* div{
+#head1{
     display: flex;
-} */
-
+    background-color: #ac5882;
+    justify-content: center;
+    align-items: center;
+    border: 1px solidblack;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px rgb(15, 15, 15);
+    border-radius: 2%;
+}
 .mainCharacterView {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    }
- #form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solidblack;
-    text-align: center;
-    font-size: 1.5em;
-    box-shadow: 0px 0px 20px 10px white;
     border-radius: 2%;
+    height: 85vh;
+    width: 45vw;
+    }
+ #form {
+    display: flex;
+    background-color: #213321;
+    justify-content:first baseline;
+    align-items:center;
+    border: 1px solidblack;
+    text-align:center;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px rgb(216, 13, 13);
+    border-radius: 2%;
+    height: 85vh;
+    width: 45vw;
  }   
+ #plyer1-selection , #plyer2-selection,#plyer1-lock, #plyer2-lock{
+    visibility: visible;
+    border: 3px solid hwb(131 3% 91%);
+    width: 10vw;
+    height: 6vh;
+    text-align: center;
+    cursor: pointer;
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    border-radius: 20%;
+    box-shadow: 0px 0px 10px 5px #dfe7ae;
+    font-weight: bold; 
+ }
+#myImg {
+    box-shadow: 0px 0px 10px 5px #dfe7ae;
+}
+
+#start-selection, #restart{
+    font-weight: bold;
+    visibility: visible;
+    border: 3px solid hwb(326 0% 89%);
+    width: 15vw;
+    height: 10vh;
+    text-align: center;
+    cursor: pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.8em;
+    box-shadow: 0px 0px 20px 10px #ddeb85; 
+}

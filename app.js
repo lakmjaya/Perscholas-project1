@@ -14,7 +14,6 @@
         if (radios[i].checked ) {
           // do whatever you when the checked radio
           val=parseInt(radios[i].value);
-          console.log(val)
           break
         }
       }
@@ -22,13 +21,15 @@
         y = number + val
         document.getElementById("play1Card").src = "cards/"+y+".svg";
         setVisible("plyer1-lock")
+        setVisible("game")      
       }else if(number ==0 && val ==0){
         alert("Player 1 : Please select your favorite betting card number and Sign")
       }else if(number ==0){
         alert("Player 1 : Please select your favorite betting card number")
       }else if(val < 0){
         alert("Player 1 : Please select your favorite betting card sign")
-      }   
+      }
+      document.getElementById("game").innerHTML = "Player1 can lock the selected card";   
     }
     function loadPage(){
       x=0
@@ -59,6 +60,7 @@
           z = number1 + val1
           document.getElementById("play2Card").src = "cards/"+z+".svg";
           setVisible("plyer2-lock")
+          setVisible("game")
         }else if(number1 ==0 && val1 ==0){
           alert("Player 2 : Please select your favorite betting card number and Sign")
         }else if(number1 ==0){
@@ -66,6 +68,7 @@
         }else if(val1 < 0) {
           alert("Player 2 : Please select your favorite betting card sign")
       }
+      document.getElementById("game").innerHTML = "Player2 can lock the selected card";
     }
     ply1.addEventListener("click", play1Section) 
 
@@ -109,14 +112,16 @@
         disableButton("plyer1-selection")
         lock1 =1
         if (z===y){
-          alert( "Both Players can not be selected same betting card")
+          document.getElementById("game").innerHTML = "Click to Re-Start the Game";
           setVisible("restart")
-        }else{
-          if(lock1 >0 && lock2 >0){
+        }else if(lock1 >0 && lock2 >0){
             setVisible ("start-selection")
             setVisible("myImg")
-          }
+            document.getElementById("game").innerHTML = "Click to Start the Game"; 
+        }else{
+          document.getElementById("game").innerHTML = "Waiting for the Player2's Selection....";
         }
+        setVisible("game")
         setHidden("plyer1-lock")
       }
 
@@ -124,15 +129,18 @@
         disableButton("plyer2-selection")
         lock2=1
         if (z===y){
-          alert( "Both Players can not be selected same betting card")
+          document.getElementById("game").innerHTML = "Click to Re-Start the Game";
           setVisible("restart") 
-        }else{
-          if(lock1 >0 && lock2 >0){
+        }else if (lock1 >0 && lock2 >0){
             setVisible("start-selection")
             setVisible("myImg")
-          }
+            document.getElementById("game").innerHTML = "Click to Start the Game";
+          
+        }else{
+          document.getElementById("game").innerHTML = "Waiting for the Player1's Selection....";
         }
         setHidden("plyer2-lock")
+        setVisible("game")
       }
 
       function restartGame(){

@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class ="bodyContainer">
-        <div class="mainCharacterView left">
+        <div id="form" class="mainCharacterView left">
             <p>Player 1<span id="choice1">'s choice</span></p>
             <img id="play1Card" src="cards/back.jpg" width="140" height="180">
-            
+            <div >
             <form>
                 <label for="num">Choose favorite Playing Card number:</label>
                 <select name="num" id="num">
@@ -42,23 +42,22 @@
                 <img src="Signs/4.jpg" height="25" width="30">
                 <input type="radio" id="sign" name="fav_sign" value=39> 
             </form>
-            <button id="plyer1-selection">Submit Player1 Selection</button>
-                
-            
+            </div>
+            <button id="plyer1-selection">Submit Player1 Selection</button>           
         </div>
         <div class="mainCharacterView center">
-            <p>Result</p>
+            <p id="game"></p>
             <img id="myImg" src="cards/back.jpg" width="140" height="180">
             <br/>
-            <button id="start-selection" onclick="startGame()">Start the Game</button>
-            <button id="restart" disabled onclick="restartGame()">Re-Start the Game</button>
-            <button id="plyer1-lock" onclick="lockPlayer1()">Lock the Player1 Selection</button>
-            <button id="plyer2-lock" onclick="lockPlayer2()">Lock the Player2 Selection</button>
+            <button id="start-selection"  onclick="startGame()">Start the Game</button>
+            <button id="restart"  onclick="restartGame()">Re-Start the Game</button>
+            <button id="plyer1-lock"  onclick="lockPlayer1()">Lock the Player1 Selection</button>
+            <button id="plyer2-lock"  onclick="lockPlayer2()">Lock the Player2 Selection</button>
         </div>
-        <div class="mainCharacterView right">
+        <div id="form" class="mainCharacterView right">
             <p>Player 2<span id="choice1">'s choice</span></p> 
             <img id="play2Card" src="cards/RED_BACK.svg" width="140" height="180">
-            
+        <div> 
             <form action="">
                 <label for="num">Choose favorite Playing Card number:</label>
                 <select name="num" id="num1">
@@ -87,6 +86,7 @@
                 <img src="Signs/4.jpg" height="25" width="30">
                 <input type="radio" id="sign1" name="fav_sign1" value=39>
             </form>
+        </div>
             <button id="plyer2-selection" onclick="play2Section()">Submit Player2 Selection</button>
         </div>
     </div>
